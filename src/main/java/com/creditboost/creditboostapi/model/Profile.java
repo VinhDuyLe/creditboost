@@ -15,7 +15,7 @@ public class Profile {
     private Long idProfile;
     private String first_name;
     private String last_name;
-    private Date date_of_birth;
+    private String date_of_birth;
     private String phone;
     private String ssn;
     private String ssn_last_four_digits;

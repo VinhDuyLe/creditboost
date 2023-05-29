@@ -18,7 +18,7 @@ public class ProfileEntity {
     private Long idProfile;
     private String first_name;
     private String last_name;
-    private Date date_of_birth;
+    private String date_of_birth;
     private String phone;
     private String ssn;
     private String ssn_last_four_digits;
@@ -28,4 +28,17 @@ public class ProfileEntity {
     private int curr_credit_score;
     private int total_num_open_loan;
 
+    public ProfileEntity(String first_name, String last_name, String date_of_birth, String phone, String ssn, String ssn_last_four_digits, long bank_account, int bank_routing, String bank_name, int curr_credit_score, int total_num_open_loan) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.date_of_birth = date_of_birth;
+        this.phone = phone;
+        this.ssn = ssn;
+        this.ssn_last_four_digits = ssn_last_four_digits;
+        this.bank_account = bank_account;
+        this.bank_routing = bank_routing;
+        this.bank_name = bank_name;
+        this.curr_credit_score = curr_credit_score;
+        this.total_num_open_loan = total_num_open_loan;
+    }
 }

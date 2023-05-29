@@ -2,21 +2,21 @@ package com.creditboost.creditboostapi.controller;
 
 import com.creditboost.creditboostapi.model.User;
 import com.creditboost.creditboostapi.service.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/v1/")
 public class UserController {
 
+    @Autowired
     UserServiceImpl userService;
 
-    public UserController(UserServiceImpl creditBoostService) {
-        this.userService = creditBoostService;
-    }
-
+    //registration
     @PostMapping("/users")
     public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
